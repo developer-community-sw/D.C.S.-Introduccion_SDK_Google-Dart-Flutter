@@ -7,7 +7,7 @@ main() {
 
   nNaturales nN = new nNaturales(10);
 
-  int p = nN.contador(1);
+  int p = nN.contador(12);
 
   //Asigno valor a las propiedades de manera directa
   nN.set_recibir(123);

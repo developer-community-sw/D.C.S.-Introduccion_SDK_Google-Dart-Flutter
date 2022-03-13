@@ -25,6 +25,7 @@ class nNaturales {
     return c;
   }
 
+  // invertir digito
   void invertir() {
     int d, aux = n, f = 0;
     while (aux > 0) {
@@ -35,9 +36,26 @@ class nNaturales {
     n = f;
   }
 
+  // mostrar digitos forma normal
+
+  // filtrar digitos pares
+  int filtrar_digito_par(int num) {
+    int e, d, aux, f = 0;
+    aux = num;
+    while (aux > 0) {
+      d = aux % 10;
+      aux = aux ~/ 10;
+      e = d % 2;
+      if (e == 0) {
+        f = (f * 10) + d;
+      }
+    }
+    return f;
+  }
+
   // Con override indicamos que sobreescribimos el metodo "padre"
 
   String toString() {
-    return 'Contador: ${contador(n)}';
+    return 'Contador: ${filtrar_digito_par(n)}';
   }
 }
